@@ -3,8 +3,39 @@
 // 
 // All Rights Reserved. See copyright.txt for details and a complete list of authors.
 // Licensed under the GNU LESSER GENERAL PUBLIC LICENSE. See license.txt for details.
-// $Id: wikiplugin_split.php 51581 2014-06-05 14:26:44Z lphuberdeau $
 
+/**
+ * Dance notation wiki plugin for Tiki.
+ *
+ * Displays a dance steps chart. Useful for swing dancing.
+ *
+ * input: YAML
+ * output: an HTML table
+ *
+ * @see http://swingster.net/tiki-index.php?page=DanceNotationPlugin
+ * @author Alexandre Quessy
+ *
+ * Example input:
+ * 
+ * {DANCENOTATION()}
+ * moves:
+ *  - name: swing out
+ *    counts: 8
+ *    steps: [step, step, triple, step, step, step, triple, step]
+ * {DANCENOTATION}
+ *
+ * Output:
+ *
+ * <table>
+ *   <tr><td colspan="8">swing out</td></tr>
+ *   <tr>
+ *     <td>step</td><td>step</td>
+ *     <td>triple</td><td>step</td>
+ *     <td>step</td><td>step</td>
+ *     <td>triple</td><td>step</td>
+ *   </tr>
+ * </table>
+ */
 function _count_counts($moves, $countspermove)
 {
 	$counts = 0;
