@@ -12,17 +12,17 @@
  * input: YAML
  * output: an HTML table
  *
- * @see http://swingster.net/tiki-index.php?page=DanceNotationPlugin
+ * @see http://swingster.net/tiki-index.php?page=DancePlugin
  * @author Alexandre Quessy
  *
  * Example input:
  * 
- * {DANCENOTATION()}
+ * {DANCE()}
  * moves:
  *  - name: swing out
  *    counts: 8
  *    steps: [step, step, triple, step, step, step, triple, step]
- * {DANCENOTATION}
+ * {DANCE}
  *
  * Output:
  *
@@ -145,13 +145,13 @@ function _chart_to_html($chart, $countspermove=8, $countsperline=16)
 	return '~np~' . $ret . '~/np~';
 }
 
-function wikiplugin_dancenotation_info()
+function wikiplugin_dance_info()
 {
 	return array(
 		'name' => tra('Dance notation'),
 		'documentation' => 'PluginDanceNotation',
 		'description' => tra('Easily write scores for dancers'),
-		'prefs' => array( 'wikiplugin_dancenotation' ),
+		'prefs' => array( 'wikiplugin_dance' ),
 		'filter' => 'wikicontent',
 		'icon' => 'img/icons/new.png',
 		'tags' => array( 'basic' ),
@@ -188,7 +188,7 @@ function _get_print_r($loaded)
 /*
  * \note Parses the input and generates some HTML.
  */
-function wikiplugin_dancenotation($data, $params, $pos)
+function wikiplugin_dance($data, $params, $pos)
 {
 	require_once 'lib/core/Horde/Yaml.php';
 	require_once 'lib/core/Horde/Yaml/Loader.php';
