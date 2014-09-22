@@ -5,6 +5,7 @@ README
 _htaccess
 about.php
 admin/
+addons/
 antibot.php
 article_image.php
 banner_click.php
@@ -633,6 +634,7 @@ lib/webmail/
 lib/webservicelib.php
 lib/wiki-plugins/wikiplugin_activitystream.php
 lib/wiki-plugins/wikiplugin_addfreetag.php
+lib/wiki-plugins/wikiplugin_addon.php
 lib/wiki-plugins/wikiplugin_addreference.php
 lib/wiki-plugins/wikiplugin_addrelation.php
 lib/wiki-plugins/wikiplugin_addtocart.php
